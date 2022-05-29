@@ -18,6 +18,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Conflict'
+              examples:
+                Jessica:
+                  value:
+                    id: 10
+                    name: Jessica Smith
+                Ron:
+                  value:
+                    id: 20
+                    name: Ron Stewart
 components:
   schemas:
     testObject:
