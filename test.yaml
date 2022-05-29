@@ -27,6 +27,38 @@ paths:
                   value:
                     id: 20
                     name: Ron Stewart
+    post:
+      summary: Adds a new user
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/testObject'
+            examples: 
+              Jessica: 
+                value:
+                  id: 10
+                  name: Jessica Smith
+              Ron:       
+                value:
+                  id: 11
+                  name: Ron Stewart
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/testObject'
+              examples:
+                Jessica:
+                  value:
+                    id: 10
+                    name: Jessica Smith
+                Ron:
+                  value:
+                    id: 20
+                    name: Ron Stewart
 components:
   schemas:
     testObject:
