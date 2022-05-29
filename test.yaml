@@ -12,6 +12,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/testObject'
+        '409':
+          description: Conflict
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Conflict'
                 
 components:
   schemas:
@@ -25,6 +31,19 @@ components:
         fullTime:
           type: boolean
       example:
+        id: 1
+        name: Jessica Right
+        fullTime: true
+  Conflict:
+     type: object
+     properties:
+        id:
+          type: integer
+        name:
+          type: string
+        fullTime:
+          type: boolean
+     example:
         id: 1
         name: Jessica Right
         fullTime: true
