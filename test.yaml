@@ -6,20 +6,25 @@ paths:
   /test-objects:
     get:
       responses:
-        200:
+        '200':
           description: OK
           content:
             application/json:
               schema:
-                type: object
-                properties: 
-                  id:
-                    type: integer
-                  name:
-                    type: string
-                  fullTime: 
-                    type: boolean
-                example:
-                    id: 1
-                    name: Jessica Right
-                    fullTime: true
+                $ref: '#/components/schemas/testObject'
+                
+components:
+  schemas:
+    testObject:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        fullTime:
+          type: boolean
+      example:
+        id: 1
+        name: Jessica Right
+        fullTime: true
