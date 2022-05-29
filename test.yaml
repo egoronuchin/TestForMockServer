@@ -2,6 +2,9 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: Test for mock-server.com
+servers:
+  - url: http://localhost:1080
+    description: mock
 paths:
   /test-objects:
     get:
