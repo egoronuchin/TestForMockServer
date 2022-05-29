@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Test for mock-server.com
+paths:
+  /test-objects:
+    get:
+      responses:
+        200:
+          description: OK
+          content:  # Response body
+            application/json:  # Media type
+              schema:          # Must-have
+                type: object   # Data type
+                properties: 
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  fullTime: 
+                    type: boolean
+                example:       # Sample data
+                    id: 1
+                    name: Jessica Right
+                    fullTime: true
